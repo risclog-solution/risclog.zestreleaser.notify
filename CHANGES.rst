@@ -3,7 +3,7 @@ Change log for risclog.zestreleaser.notify
 ==========================================
 
 
-0.1.0 (unreleased)
-==================
+1.0 (2023-04-06)
+================
 
 * initial release
