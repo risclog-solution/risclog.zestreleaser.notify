@@ -1,1 +1,1 @@
-"""Top-level package for risclog.zestreleaser.keybase."""
+__import__('pkg_resources').declare_namespace(__name__)

@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = risclog.zestreleaser.keybase
+SPHINXPROJ    = risclog.zestreleaser.notify
 SOURCEDIR     = .
 BUILDDIR      = _build
 

@@ -1,5 +1,5 @@
-Welcome to risclog.zestreleaser.keybase's documentation!
-======================================
+Welcome to risclog.zestreleaser.notify's documentation!
+=======================================================
 
 .. toctree::
    :maxdepth: 2

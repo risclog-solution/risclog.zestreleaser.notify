@@ -28,6 +28,7 @@ setup(
     install_requires=[
         'pydantic[dotenv]',
         # Add your dependencies here
+        'zest.releaser >= 5.0',
     ],
     extras_require={
         'docs': [
@@ -47,15 +48,20 @@ setup(
             'requests',
         ],
     },
+    entry_points={
+        'zest.releaser.releaser.after': [
+            'notify=risclog.zestreleaser.notify:notify',
+        ]
+    },
     license='MIT license',
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='risclog.zestreleaser.keybase',
-    name='risclog.zestreleaser.keybase',
+    keywords='risclog.zestreleaser.notify',
+    name='risclog.zestreleaser.notify',
     packages=find_packages('src'),
-    namespace_packages=['risclog'],
+    namespace_packages=['risclog', 'risclog.zestreleaser'],
     package_dir={'': 'src'},
-    url='https://github.com/risclog-solution/risclog.zestreleaser.keybase',
-    version='0.1.0.dev0',
+    url='https://github.com/risclog-solution/risclog.zestreleaser.notify',
+    version='1.0.dev0',
     zip_safe=False,
 )

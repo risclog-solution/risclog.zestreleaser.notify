@@ -47,7 +47,7 @@ jobs:
     if: needs.check-release.outputs.result == '1'
     uses: risclog-solution/gha_workflow_templates/.github/workflows/release.yml@master
     with:
-      package_name: risclog.zestreleaser.keybase
+      package_name: risclog.zestreleaser.notify
     secrets:
       PYPIRC: ${{ secrets.PYPIRC }}
 

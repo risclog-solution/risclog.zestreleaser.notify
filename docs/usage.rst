@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use risclog.zestreleaser.keybase in a project::
+To use risclog.zestreleaser.notify in a project::
 
-    import risclog.zestreleaser.keybase
+    import risclog.zestreleaser.notify

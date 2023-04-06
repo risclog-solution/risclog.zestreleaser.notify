@@ -1,4 +1,4 @@
-* risclog.zestreleaser.keybase version:
+* risclog.zestreleaser.notify version:
 * Python version:
 * Operating System:
 

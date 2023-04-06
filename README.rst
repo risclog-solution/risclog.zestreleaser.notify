@@ -1,27 +1,35 @@
 ============================
-risclog.zestreleaser.keybase
+risclog.zestreleaser.notify
 ============================
 
-.. image:: https://github.com/risclog-solution/risclog.zestreleaser.keybase/workflows/Test/badge.svg?branch=master
-     :target: https://github.com/risclog-solution/risclog.zestreleaser.keybase/actions?workflow=Test
+.. image:: https://github.com/risclog-solution/risclog.zestreleaser.notify/workflows/Test/badge.svg?branch=master
+     :target: https://github.com/risclog-solution/risclog.zestreleaser.notify/actions?workflow=Test
      :alt: CI Status
 
 
-.. image:: https://img.shields.io/pypi/v/risclog.zestreleaser.keybase.svg
-        :target: https://pypi.python.org/pypi/risclog.zestreleaser.keybase
+.. image:: https://img.shields.io/pypi/v/risclog.zestreleaser.notify.svg
+        :target: https://pypi.python.org/pypi/risclog.zestreleaser.notify
 
-.. image:: https://img.shields.io/travis/risclog-solution/risclog.zestreleaser.keybase.svg
-        :target: https://travis-ci.com/risclog-solution/risclog.zestreleaser.keybase
+.. image:: https://img.shields.io/travis/risclog-solution/risclog.zestreleaser.notify.svg
+        :target: https://travis-ci.com/risclog-solution/risclog.zestreleaser.notify
 
-.. image:: https://readthedocs.org/projects/risclog.zestreleaser.keybase/badge/?version=latest
-        :target: https://risclog.zestreleaser.keybase.readthedocs.io/en/latest/?version=latest
+.. image:: https://readthedocs.org/projects/risclog.zestreleaser.notify/badge/?version=latest
+        :target: https://risclog.zestreleaser.notify.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
-Notify about new release in keybase channel.
+Notify about new release in notify channel.
+
+This package provides a plugin for zest.releaser that offers to notify about a
+new release in a configured notify channel.
+
+To use, add a section to your ~/.pypirc like the following:
+
+    [risclog.zestreleaser.notify]
+    keybase = https://bots.keybase.io/webhookbot/<CHANNELID>
 
 
 * Free software: MIT license
-* Documentation: https://risclog.zestreleaser.keybase.readthedocs.io.
+* Documentation: https://risclog.zestreleaser.notify.readthedocs.io.
 
 
 Features
@@ -30,11 +38,6 @@ Features
 Run tests::
 
     $ ./pytest
-
-
-
-
-
 
 
 Credits
@@ -49,4 +52,3 @@ This package was created with Cookiecutter_ and the `risclog-solution/risclog-co
 This package uses AppEnv_ for running tests inside this package.
 
 .. _AppEnv: https://github.com/flyingcircusio/appenv
-
