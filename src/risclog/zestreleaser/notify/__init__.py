@@ -1,8 +1,9 @@
-from six.moves import configparser
-import requests
 import os
 import os.path
+
+import requests
 import zest.releaser.utils
+from six.moves import configparser
 
 
 def read_configuration(filename):
@@ -14,16 +15,13 @@ def read_configuration(filename):
 def read_destinations(config, section):
     if section not in config.sections():
         return None
-    return sorted(
-        config.items(section), key=lambda x: len(x[0]), reverse=True
-    )
+    return sorted(config.items(section), key=lambda x: len(x[0]), reverse=True)
 
 
 def notify(context):
     version = context['version']
     destinations = read_destinations(
-        read_configuration('~/.pypirc'),
-        'risclog.zestreleaser.notify'
+        read_configuration('~/.pypirc'), 'risclog.zestreleaser.notify'
     )
     if not destinations:
         return
@@ -45,7 +43,7 @@ def read_changes(workdir, version):
     changelogfile = os.path.join(workdir, 'CHANGES.rst')
     if os.path.exists(changelogfile):
         changelog = open(changelogfile, 'r').read()
-    changelog = changelog.split(f"{version} (")[1]
+    changelog = changelog.split(f'{version} (')[1]
     changelog = changelog.split('===============\n')[1]
     changelog = changelog.splitlines()[:-2]
     changelog = [ln for ln in changelog if ln]
@@ -55,15 +53,16 @@ def read_changes(workdir, version):
 def handle_keybase(context, url, changelog):
     package = context['name']
     version = context['version']
-    payload = {"msg": f"""\
+    payload = {
+        'msg': f"""\
 new release: `{package}` `{version}`:
 
 CHANGELOG: https://github.com/risclog-solution/{package}/blob/{version}/CHANGES.rst
 
-""" + changelog}
+"""  # noqa
+        + changelog
+    }
     requests.post(url, json=payload)
 
 
-AVAILABLE_SERVICES = dict(
-    keybase=handle_keybase
-)
+AVAILABLE_SERVICES = dict(keybase=handle_keybase)

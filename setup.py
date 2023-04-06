@@ -27,7 +27,7 @@ setup(
         # Add your dependencies here
         'zest.releaser >= 5.0',
         'requests',
-        'six'
+        'six',
     ],
     extras_require={
         'docs': [
