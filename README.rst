@@ -10,26 +10,19 @@ risclog.zestreleaser.notify
 .. image:: https://img.shields.io/pypi/v/risclog.zestreleaser.notify.svg
         :target: https://pypi.python.org/pypi/risclog.zestreleaser.notify
 
-.. image:: https://img.shields.io/travis/risclog-solution/risclog.zestreleaser.notify.svg
-        :target: https://travis-ci.com/risclog-solution/risclog.zestreleaser.notify
-
-.. image:: https://readthedocs.org/projects/risclog.zestreleaser.notify/badge/?version=latest
-        :target: https://risclog.zestreleaser.notify.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-
-Notify about new release in notify channel.
 
 This package provides a plugin for zest.releaser that offers to notify about a
-new release in a configured notify channel.
+new release in a configured channel (actually only Keybase_ is supported).
 
-To use, add a section to your ~/.pypirc like the following:
+.. _Keybase: https://keybase.io
+
+To use, add a section to your ~/.pypirc like the following::
 
     [risclog.zestreleaser.notify]
     keybase = https://bots.keybase.io/webhookbot/<CHANNELID>
 
 
 * Free software: MIT license
-* Documentation: https://risclog.zestreleaser.notify.readthedocs.io.
 
 
 Features
