@@ -29,6 +29,8 @@ setup(
         'pydantic[dotenv]',
         # Add your dependencies here
         'zest.releaser >= 5.0',
+        'requests',
+        'six'
     ],
     extras_require={
         'docs': [
