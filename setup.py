@@ -7,9 +7,6 @@ from setuptools import find_packages, setup
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
-with open('CHANGES.rst') as history_file:
-    history = history_file.read()
-
 setup(
     author='riscLOG Solution GmbH',
     author_email='info@risclog.de',
@@ -56,8 +53,7 @@ setup(
         ]
     },
     license='MIT license',
-    long_description=readme + '\n\n' + history,
-    long_description_content_type="text/markdown",
+    long_description=readme,
     include_package_data=True,
     keywords='risclog.zestreleaser.notify',
     name='risclog.zestreleaser.notify',
