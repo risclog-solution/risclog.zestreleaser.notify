@@ -23,7 +23,7 @@ setup(
     ],
     description='Notify about new release in keybase channel.',
     install_requires=[
-        'pydantic[dotenv]',
+        'pydantic[dotenv]<2',
         # Add your dependencies here
         'zest.releaser >= 5.0',
         'requests',
