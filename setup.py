@@ -61,6 +61,6 @@ setup(
     namespace_packages=['risclog', 'risclog.zestreleaser'],
     package_dir={'': 'src'},
     url='https://github.com/risclog-solution/risclog.zestreleaser.notify',
-    version='1.0.3',
+    version='1.0.4.dev0',
     zip_safe=False,
 )
