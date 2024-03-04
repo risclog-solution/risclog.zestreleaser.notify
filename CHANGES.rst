@@ -3,7 +3,7 @@ Change log for risclog.zestreleaser.notify
 ==========================================
 
 
-1.0.4 (unreleased)
+1.1.0 (2024-03-04)
 ==================
 
 - Add hookshot integration.
