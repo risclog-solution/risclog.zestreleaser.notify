@@ -65,4 +65,22 @@ CHANGELOG: https://github.com/risclog-solution/{package}/blob/{version}/CHANGES.
     requests.post(url, json=payload)
 
 
-AVAILABLE_SERVICES = dict(keybase=handle_keybase)
+def handle_hookshot(context, url, changelog):
+    package = context['name']
+    version = context['version']
+    payload = {
+        'text': f"""\
+new release: `{package}` `{version}`:
+
+CHANGELOG: https://github.com/risclog-solution/{package}/blob/{version}/CHANGES.rst
+
+"""  # noqa
+        + changelog
+    }
+    requests.put(url, json=payload)
+
+
+AVAILABLE_SERVICES = dict(
+    keybase=handle_keybase,
+    hookshot=handle_hookshot,
+)
