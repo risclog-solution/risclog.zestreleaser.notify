@@ -1,5 +1,4 @@
-# appenv-python-preference: 3.9,3.8
---extra-index-url https://pypi:sUAh5YidAP43@pypi2.claimx.net/pypi/prod/
+# appenv-python-preference: 3.10,3.9
 -e .[test,doc]
 jeepney
 secretstorage
