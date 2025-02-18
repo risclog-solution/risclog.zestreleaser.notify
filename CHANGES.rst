@@ -3,7 +3,7 @@ Change log for risclog.zestreleaser.notify
 ==========================================
 
 
-1.1.1 (unreleased)
+1.1.1 (2025-02-18)
 ==================
 
 - Handle special changelog url for specific package.
