@@ -6,7 +6,7 @@ Change log for risclog.zestreleaser.notify
 1.1.1 (unreleased)
 ==================
 
-- Nothing changed yet.
+- Handle special changelog url for specific package.
 
 
 1.1.0 (2024-03-04)

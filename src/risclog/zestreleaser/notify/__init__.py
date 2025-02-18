@@ -66,13 +66,15 @@ CHANGELOG: https://github.com/risclog-solution/{package}/blob/{version}/CHANGES.
 
 
 def handle_hookshot(context, url, changelog):
-    package = context['name']
+    package = package_name = context['name']
+    if package_name == 'Products.ClaimX':  # special case
+        package_name = 'claimx'
     version = context['version']
     payload = {
         'text': f"""\
 new release: `{package}` `{version}`:
 
-CHANGELOG: https://github.com/risclog-solution/{package}/blob/{version}/CHANGES.rst
+CHANGELOG: https://github.com/risclog-solution/{package_name}/blob/{version}/CHANGES.rst
 
 """  # noqa
         + changelog
